@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "adsvise.me",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian","_Config", "Box"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
