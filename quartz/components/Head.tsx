@@ -97,6 +97,7 @@ export default (() => {
             return resource
           }
         })}
+        <script src="/custom.js"></script>
       </head>
     )
   }
