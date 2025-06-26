@@ -13,7 +13,6 @@ Date-created: 2025-06-25
 aliases:
 ---
 >[!summary]
->![[UltraInSync#^2npIbPdp]]
 
 <div style="page-break-after: always;"></div>
 
