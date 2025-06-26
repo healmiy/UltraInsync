@@ -17,7 +17,8 @@ aliases:
 
 
 <div style="page-break-after: always;"></div>
-test
+
+
 # Sync-ing up repo
 
 > [!important]- Git: Commit and Sync
