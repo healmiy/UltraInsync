@@ -76,17 +76,7 @@ type `npx quartz build --serve` in VS code terminal [^25-07-04]
 [^25-06-26]: [[excluded-file-extentions.png]]
 
 # Website Setup
-
-1. Basic Config[^25-07-04]
-	1. gitignore
-	2. ignorepaterns
-2. Giscuss comment section 
-   ![[Pasted image 20250704233247.png]]
-3. enable blog editing & history monitoring on blog posts 
-   ![[Pasted image 20250704232927.png]]
-<p class="hide">source:</p>
-
-[^25-07-04]: https://quartz.jzhao.xyz/configuration#general-configuration
+![[README#Forked features]]
 
 
 
