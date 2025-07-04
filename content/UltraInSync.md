@@ -76,7 +76,7 @@ type `npx quartz build --serve` in VS code terminal [^25-07-04]
 [^25-06-26]: [[excluded-file-extentions.png]]
 
 # Website Setup
-![[README#Forked features]]
+![[README#Forked updates]]
 
 
 
