@@ -1,11 +1,11 @@
-# Quartz v4
+# Quartz - Obsidian self hosted website
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hammingtest
+Quartz is a set of tools that helps you publish your digital garden[^25-07-05] and notes as a website for free. Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use. Read the documentation and get started 🔗 https://quartz.jzhao.xyz/
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+<p class="hide">source:</p>
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+[^25-07-05]: (https://jzhao.xyz/posts/networked-thought) 
+
 
 ## Forked updates
 
