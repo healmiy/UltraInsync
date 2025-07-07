@@ -14,10 +14,8 @@ Date-created: 2025-07-05
 >[!summary]
 >![[atomic notes.svg]]
 
-<div style="page-break-after: always;"></div>
-
 # Principles of Atomic Note-Taking
->[!cue] Atomic notes are the building blocks of the Idea Compass 
+>[!cue|float-left] Atomic notes are the building blocks of the Idea Compass 
 >![[flowchart#^frame=AhOFEUAT8_Ab4QGnoRZaQ]]
 1. One idea, one note.[^25-07-07]
 	1.  Atomic notes are written notes that focus on the development of a single idea. 
@@ -27,13 +25,9 @@ Date-created: 2025-07-05
 5. Notes focused on a single topic.
 6. Information mapping.
 
-
-
-
-
 <p class="hide">source:</p>
 
-[^25-07-07]: [gokayburuc.dev. 24.12.9. Atomic Note-Taking Guide. Dev.to](https://dev.to/gokayburuc/atomic-note-taking-guide-4fo9)
+[^25-07-07]: [gokayburuc.dev. (2024, Dec 9). Atomic Note-Taking Guide. Dev.to](https://dev.to/gokayburuc/atomic-note-taking-guide-4fo9)
 
 
 
@@ -47,7 +41,7 @@ atomic notes ^QRixaxbw
 different methodology but could be complimentary 🤔 ^tURTlihM
 
 ## Element Links
-bFY2iyzZ: [[atomic notes.md#Principles of Atomic Note-Taking]]
+bFY2iyzZ: [[atomic notes#Principles of Atomic Note-Taking]]
 
 ## Embedded Files
 f374eb9a6e30ceca22dfd3fa5e87a0a162e68adf: [[flowchart#^frame=AhOFEUAT8_Ab4QGnoRZaQ]]
