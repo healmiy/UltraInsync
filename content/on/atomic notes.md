@@ -15,6 +15,7 @@ Date-created: 2025-07-05
 >[!summary]
 >![[atomic notes.svg]]
 # Principles of Atomic Note-Taking
+
 >[!cue|float-left] Atomic notes are the building blocks of the Idea Compass 
 >![[flowchart#^frame=AhOFEUAT8_Ab4QGnoRZaQ]]
 1. One idea, one note.[^25-07-07]
