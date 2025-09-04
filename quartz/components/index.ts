@@ -24,6 +24,8 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 
+import LinksHeader from "./LinksHeader" // Custom addition to export LinksHeader
+
 export {
   ArticleTitle,
   Content,
@@ -48,6 +50,7 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  LinksHeader, // Custom addition to export LinksHeader
   Flex,
   ConditionalRender,
 }
