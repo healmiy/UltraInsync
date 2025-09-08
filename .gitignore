@@ -12,4 +12,5 @@ replit.nix
 Box/
 _Config/
 
+/content/custom.js
 /content/
