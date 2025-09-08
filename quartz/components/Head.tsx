@@ -97,7 +97,8 @@ export default (() => {
             return resource
           }
         })}
-        <script src="/custom.js"></script>
+        <link rel="stylesheet" href="/publish.css"></link>
+        <script src="/publish.js"></script>
       </head>
     )
   }
