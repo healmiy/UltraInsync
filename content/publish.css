@@ -36,6 +36,10 @@ svg.excalidraw-svg.ex-pagewidth {
 .excalidraw-svg .text {
   width: 100%;
   text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray, #666);
+  padding: 0.5rem;
+  font-style: italic;
 }
 
 div.excalidraw-svg.enlarged {
@@ -49,16 +53,91 @@ div.excalidraw-svg.enlarged {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
 }
 
-body {
-	--background-primary: #FFF6F0;
+/* Enhanced SVG container styling */
+div.excalidraw-svg {
+    border: 1px solid var(--lightgray, #e5e5e5);
+    border-radius: 8px;
+    background: var(--light, #ffffff);
+    margin: 1rem 0;
+    padding: 1rem;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-a.site-body-left-column-site-name {
-	display: none;
+div.excalidraw-svg:hover {
+    border-color: var(--secondary, #4472a5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-div.site-footer {
-	display: none;
+/* Dark mode support */
+[saved-theme="dark"] div.excalidraw-svg {
+    border-color: var(--darkgray, #4a4a4a);
+    background: var(--dark, #1e1e1e);
+}
+
+[saved-theme="dark"] div.excalidraw-svg:hover {
+    border-color: var(--secondary, #6b9bd5);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+[saved-theme="dark"] .excalidraw-svg .text {
+    color: var(--lightgray, #bbb);
+}
+
+[saved-theme="dark"] div.excalidraw-svg.enlarged {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    div.excalidraw-svg {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 4px;
+    }
+    
+    svg.excalidraw-svg {
+        max-height: 70vh;
+    }
+    
+    .excalidraw-svg .text {
+        font-size: 0.8rem;
+        padding: 0.25rem;
+    }
+}
+
+/* Ensure SVG links are interactive */
+div.excalidraw-svg a {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+div.excalidraw-svg a:hover {
+    opacity: 0.7;
+}
+
+/* Loading state */
+.svg-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: var(--gray, #666);
+    font-style: italic;
+}
+
+/* Error state */
+.svg-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: var(--darkgray, #999);
+    background: var(--lightgray, #f5f5f5);
+    border: 1px dashed var(--gray, #ccc);
+    border-radius: 4px;
+    font-style: italic;
 }

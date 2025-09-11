@@ -374,10 +374,19 @@ export async function handleBuild(argv) {
         await serveHandler(req, res, {
           public: argv.output,
           directoryListing: false,
+          cleanUrls: true,
           headers: [
             {
               source: "**/*.*",
               headers: [{ key: "Content-Disposition", value: "inline" }],
+            },
+            {
+              source: "**/*.svg",
+              headers: [
+                { key: "Content-Type", value: "image/svg+xml; charset=utf-8" },
+                { key: "Cache-Control", value: "no-transform" },
+                { key: "X-Content-Type-Options", value: "nosniff" }
+              ],
             },
             {
               source: "**/*.webp",

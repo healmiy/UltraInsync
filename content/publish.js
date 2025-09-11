@@ -1,6 +1,8 @@
 const clickToEnlarge = "Click and hold to enlarge. SHIFT + wheel to zoom. ESC to reset.";
 const clickToCollapse = "ESC to reset. Click and hold to collapse. SHIFT + wheel to zoom";
 
+console.log('SVG Interactive Script Loading...');
+
 //check if in iFrame - if yes the page is assumed to be an embedded frame
 if(window.self !== window.top) {
   const elements = [
@@ -26,13 +28,14 @@ const [isDesktop, isMobile, isTablet] = (()=>{
   const isTablet = /iPad/i.test(userAgent) || (isMobile && !/Mobile/i.test(userAgent));
   const isDesktop = !isMobile && !isTablet;
 
+  console.log('Device detection:', { isDesktop, isMobile, isTablet });
   return [isDesktop, isMobile, isTablet];
 })();
 
 const addNavigationToDiv = (container) => {
   const svgElement = container?.querySelector('.excalidraw-svg');
   if(!svgElement) return;
-  container.addClass("excalidraw-svg");
+  container.classList.add("excalidraw-svg");
   svgElement.removeAttribute("width");
   svgElement.removeAttribute("height");
   
@@ -156,7 +159,7 @@ const addNavigationToDiv = (container) => {
         textDiv.textContent = clickToEnlarge;
       } else {
         // Enlarge the image
-        container.addClass("enlarged");
+        container.classList.add("enlarged");
         textDiv.textContent = clickToCollapse;
       }
       isEnlarged = !isEnlarged;
@@ -169,15 +172,19 @@ const addNavigationToDiv = (container) => {
 const processIMG = (img) => {
   const svgURL = img.src;
   const container = img.parentElement;
+  
+  console.log('Processing IMG:', svgURL, img);
 
   fetch(svgURL)
     .then((response) => {
+      console.log('Fetch response:', response.ok, response.status);
       if (response.ok) {
         return response.text();
       }
       throw new Error('Failed to fetch SVG');
     })
-    .then((svgContent) => {    
+    .then((svgContent) => {
+      console.log('SVG content fetched, length:', svgContent.length);    
       svgContainer = document.createElement('div');
       svgContainer.innerHTML = svgContent;
       svgContainer.querySelectorAll(`a[href^="obsidian://open?vault="`).forEach(el=>{
@@ -188,11 +195,12 @@ const processIMG = (img) => {
       });
       container.removeChild(img);
       container.appendChild(svgContainer);
+      console.log('SVG container created, adding navigation...');
       addNavigationToDiv(svgContainer);
       
     })
     .catch((error) => {
-      console.error('Error: ' + error);
+      console.error('Error processing SVG:', error);
     });
 }
 
@@ -202,8 +210,8 @@ const addImgMutationObserver = () => {
     for (const mutation of mutationsList) {
       if (mutation.type === 'childList') {
     mutation.addedNodes.forEach(node => {
-      if (node instanceof Element && node.querySelector(`img[alt$=".svg"]`)) {
-        processIMG(node.querySelector(`img[alt$=".svg"]`));
+      if (node instanceof Element && node.querySelector(`img[src$=".svg"]`)) {
+        processIMG(node.querySelector(`img[src$=".svg"]`));
       };
         });
       }
@@ -215,8 +223,29 @@ const addImgMutationObserver = () => {
 }
 
 //process images after loading
-document.body.querySelectorAll(`img[alt$=".svg"`).forEach(img => {
-  processIMG(img);
-});
+const initSVGProcessing = () => {
+  console.log('Initializing SVG processing...');
+  console.log('Looking for SVG images...');
+  const svgImages = document.body.querySelectorAll(`img[src$=".svg"]`);
+  console.log('Found SVG images:', svgImages.length, svgImages);
 
-addImgMutationObserver();
+  svgImages.forEach(img => {
+    console.log('Processing SVG image:', img.src);
+    processIMG(img);
+  });
+
+  addImgMutationObserver();
+};
+
+// Wait for DOM to be ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSVGProcessing);
+} else {
+  initSVGProcessing();
+}
+
+// Also run on navigation events (for SPA behavior)
+document.addEventListener('nav', () => {
+  console.log('Navigation event detected, processing SVGs...');
+  setTimeout(initSVGProcessing, 100);
+});
