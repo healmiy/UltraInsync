@@ -280,7 +280,7 @@ tse ^swq9jXiK
 tes ^zVXbck4k
 
 ## Element Links
-zboQRAfD: [[UltraInSync#Sync-ing up repo]]
+zboQRAfD: [[Cornell Note taking style#Cues]]
 
 WHLBiNwF: [[BiB.md]]
 
@@ -1162,18 +1162,18 @@ c403c03f9efa741b4ba7f7a6d6c1a12dc2e2eb28: [[Pasted Image 20250906010229_022.png]
 			"index": "aE",
 			"roundness": null,
 			"seed": 284374452,
-			"version": 137,
-			"versionNonce": 790508997,
+			"version": 138,
+			"versionNonce": 1802580065,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1757267635034,
+			"updated": 1757626227218,
 			"link": null,
 			"locked": false,
 			"customData": {
 				"frameColor": {
-					"stroke": "#0D2D57",
-					"fill": "#164F9A",
-					"nameColor": "#3480E2"
+					"stroke": "#AACEF3",
+					"fill": "#67A7EA",
+					"nameColor": "#1C74CF"
 				}
 			},
 			"name": "Frame 1 - Core, can't start sync-ing before setting all this up"
@@ -1270,7 +1270,7 @@ c403c03f9efa741b4ba7f7a6d6c1a12dc2e2eb28: [[Pasted Image 20250906010229_022.png]
 			"type": "embeddable",
 			"x": 640,
 			"y": 260,
-			"width": 100,
+			"width": 80,
 			"height": 100,
 			"angle": 0,
 			"strokeColor": "#000000",
@@ -1282,13 +1282,13 @@ c403c03f9efa741b4ba7f7a6d6c1a12dc2e2eb28: [[Pasted Image 20250906010229_022.png]
 			"opacity": 100,
 			"roundness": null,
 			"seed": 91198,
-			"version": 198,
-			"versionNonce": 1141739811,
-			"updated": 1750920440668,
+			"version": 202,
+			"versionNonce": 870429121,
+			"updated": 1757626859452,
 			"isDeleted": false,
 			"groupIds": [],
 			"boundElements": [],
-			"link": "[[UltraInSync#Sync-ing up repo]]",
+			"link": "[[Cornell Note taking style#Cues]]",
 			"locked": false,
 			"scale": [
 				0.1,
@@ -6697,7 +6697,7 @@ c403c03f9efa741b4ba7f7a6d6c1a12dc2e2eb28: [[Pasted Image 20250906010229_022.png]
 		}
 	],
 	"appState": {
-		"theme": "dark",
+		"theme": "light",
 		"viewBackgroundColor": "#f5faff",
 		"currentItemStrokeColor": "#bbb",
 		"currentItemBackgroundColor": "#ffffff",
@@ -6713,10 +6713,10 @@ c403c03f9efa741b4ba7f7a6d6c1a12dc2e2eb28: [[Pasted Image 20250906010229_022.png]
 		"currentItemEndArrowhead": "triangle_outline",
 		"currentItemArrowType": "round",
 		"currentItemFrameRole": null,
-		"scrollX": 335.4825054455769,
-		"scrollY": 559.1929245420454,
+		"scrollX": -552.2791418282882,
+		"scrollY": -154.05349457814998,
 		"zoom": {
-			"value": 2.09363
+			"value": 5.87034
 		},
 		"currentItemRoundness": "sharp",
 		"gridSize": 20,

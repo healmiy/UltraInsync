@@ -15,6 +15,37 @@ div.markdown-embed {
 div.excalidraw-svg {
 	/*width: fit-content;*/
 	height: 100%;
+	position: relative;
+}
+
+/* Tooltip for navigation instructions */
+div.excalidraw-svg[data-tip]:hover::after {
+	content: attr(data-tip);
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--dark, #2d2d2d);
+	color: var(--light, #ffffff);
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	white-space: nowrap;
+	z-index: 1000;
+	pointer-events: none;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+div.excalidraw-svg[data-tip]:hover::before {
+	content: '';
+	position: absolute;
+	bottom: -6px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 6px solid transparent;
+	border-bottom-color: var(--dark, #2d2d2d);
+	z-index: 1001;
+	pointer-events: none;
 }
 
 svg.excalidraw-svg {
@@ -140,4 +171,75 @@ div.excalidraw-svg a:hover {
     border: 1px dashed var(--gray, #ccc);
     border-radius: 4px;
     font-style: italic;
+}
+
+/* Iframe-specific styles - when page is loaded in iframe */
+body.iframe-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--light, #ffffff) !important;
+}
+
+body.iframe-content article {
+    margin: 0 !important;
+    padding: 1rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Hide ALL navigation and chrome elements when in iframe */
+body.iframe-content .left.sidebar,
+body.iframe-content .right.sidebar,
+body.iframe-content header,
+body.iframe-content footer,
+body.iframe-content .page-header,
+body.iframe-content .page-footer,
+body.iframe-content nav,
+body.iframe-content .breadcrumb-container,
+body.iframe-content .giscus,
+body.iframe-content .darkmode,
+body.iframe-content .search,
+body.iframe-content .explorer,
+body.iframe-content .toc,
+body.iframe-content .graph,
+body.iframe-content .backlinks,
+body.iframe-content #links-header-container,
+body.iframe-content .edit-btn,
+body.iframe-content .content-meta,
+body.iframe-content .site-body-right-column,
+body.iframe-content .site-body-left-column,
+body.iframe-content .site-header,
+body.iframe-content .site-footer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Force hide with universal approach */
+body.iframe-content #quartz-body > *:not(.center) {
+    display: none !important;
+}
+
+body.iframe-content .center > *:not(article) {
+    display: none !important;
+}
+
+/* Ensure main content is properly displayed in iframe */
+body.iframe-content #quartz-root,
+body.iframe-content #quartz-body,
+body.iframe-content .center {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+/* Override any grid or flex layouts that might show sidebars */
+body.iframe-content #quartz-body {
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-areas: none !important;
 }
