@@ -15,7 +15,7 @@ This page demonstrates the InlineSVG plugin working with both standard markdown 
 ## Obsidian Wikilink Syntax
 
 ![[Cornell Note taking style.svg]]
-
+[[tester]]
 ## Another SVG with Wikilink
 
 ![[UltraInSync.svg]]

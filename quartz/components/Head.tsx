@@ -90,6 +90,11 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        
+        {/* Custom Canvas Navigation Script */}
+        <script src="/canvas-navigation.js"></script>
+        <link rel="stylesheet" href="/canvas.css" />
+        
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
             return resource(fileData)
@@ -97,8 +102,6 @@ export default (() => {
             return resource
           }
         })}
-        <link rel="stylesheet" href="/publish.css"></link>
-        <script src="/publish.js"></script>
       </head>
     )
   }
