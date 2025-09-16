@@ -9,13 +9,13 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "UltraInSync",
-    pageTitleSuffix: "|",
-    enableSPA: false,
+    pageTitleSuffix: " |",
+    enableSPA: true,
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "adsvise.me",
-    ignorePatterns: ["private", "templates", ".obsidian","_Config"],
+    baseUrl: "adsvise.llc",
+    ignorePatterns: ["private", "templates", ".obsidian",".quartz",".stfolder",".stversions",".trash","_Config","Box"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
