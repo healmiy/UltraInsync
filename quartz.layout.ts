@@ -11,11 +11,11 @@ export const sharedPageComponents: SharedLayout = {
       // from data-repo
       repo: 'Healmiy/PKMxKB',
       // from data-repo-id
-      repoId: 'R_kgDOPB9zmg',
+      repoId: 'R_kgDOPwbf4A',
       // from data-category
-      category: 'Announcements',
+      category: 'General',
       // from data-category-id
-      categoryId: 'DIC_kwDOPB9zms4CsBaG',
+      categoryId: 'DIC_kwDOPwbf4M4CvgrP',
       // from data-mapping
       mapping: "title",
       reactionsEnabled: false,
@@ -25,7 +25,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/healmiy/PKMxKB",
-      "Adsvise.LLC": "https://adsvise.llc",
+      "Adsvise.LLC": "https://adsvise.me",
       "Taxless.MY": "https://taxless.my",
     },
   }),
@@ -52,7 +52,7 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        //{ Component: Component.ReaderMode() },
       ],
     }),
     Component.Explorer(),
