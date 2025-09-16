@@ -9,3 +9,6 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+# Custom setup (npx quartz build --directory=../  --output=public/on --serve)
+/content

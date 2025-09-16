@@ -14,8 +14,8 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "adsvise.llc",
-    ignorePatterns: ["private", "templates", ".obsidian",".quartz",".stfolder",".stversions",".trash","_Config","Box"],
+    baseUrl: "adsvise.me",
+    ignorePatterns: ["private", "templates", ".obsidian","/.quartz",".stfolder",".stversions",".trash","_Config","Box"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
