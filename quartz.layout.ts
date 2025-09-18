@@ -9,22 +9,25 @@ export const sharedPageComponents: SharedLayout = {
     provider: 'giscus',
     options: {
       // from data-repo
-      repo: 'Healmiy/PKMxKB',
+      repo: 'Healmiy/UltraInsync',
       // from data-repo-id
-      repoId: 'R_kgDOPwbf4A',
+      repoId: 'R_kgDOPB9zmg',
       // from data-category
       category: 'General',
       // from data-category-id
-      categoryId: 'DIC_kwDOPwbf4M4CvgrP',
+      categoryId: 'DIC_kwDOPB9zms4CsBaH',
       // from data-mapping
       mapping: "title",
       reactionsEnabled: false,
+      themeUrl: "https://adsvise.me/on/static/giscus", // corresponds to quartz/static/giscus/
+      lightTheme: "light-theme", // corresponds to light-theme.css in quartz/static/giscus/
+      darkTheme: "dark-theme", // corresponds to dark-theme.css quartz/static/giscus/
     }
   }),
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/healmiy/PKMxKB",
+      GitHub: "https://github.com/healmiy/UltraInsync",
       "Adsvise.LLC": "https://adsvise.me",
       "Taxless.MY": "https://taxless.my",
     },

@@ -1,14 +1,20 @@
 .DS_Store
-.gitignore
 node_modules
-public
-prof
-tsconfig.tsbuildinfo
-.obsidian
 .quartz-cache
-private/
-.replit
-replit.nix
+tsconfig.tsbuildinfo
 
-# Custom setup (npx quartz build --directory=../  --output=public/on --serve)
-/content
+# Custom setup (npx quartz build --directory=PKMxKB --output=public/on --serve)
+/public
+/PKMxKB/.gitignore
+/PKMxKB/.gitattributes
+
+#Obsidian
+PKMxKB/_Config/
+PKMxKB/.obsidian/
+PKMxKB/.trash/
+PKMxKB/Box/
+
+#Syncthing
+.stfolder
+.stversions
+.stignore
